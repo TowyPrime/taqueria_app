@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Taqueria</string>
+    <string name="description_logo">Logo de aplicaciòn</string>
 </resources>
