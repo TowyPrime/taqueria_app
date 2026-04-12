@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Taqueria</string>
     <string name="description_logo">Logo de aplicaciòn</string>
+    <string name="description_app">Aplicación de ventas</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="btn_add_account">Crear cuenta</string>
+    <string name="more_signIn">O utiliza alguna de estas opciones</string>
+    <string name="btn_login_facebook">Inicia sesión con Facebook</string>
+    <string name="btn_login_google">Inicia sesión con cuenta de google</string>
+    <string name="helper_required">Campo requerido</string>
+    <string name="hint_email">correo electrònico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_phone">nùmero de telèfono</string>
+    <string name="btn_cancel">Cancelar</string>
 </resources>
