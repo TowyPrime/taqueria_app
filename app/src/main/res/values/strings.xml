@@ -13,4 +13,11 @@
     <string name="hint_name">Nombre</string>
     <string name="hint_phone">nùmero de telèfono</string>
     <string name="btn_cancel">Cancelar</string>
+    <string name="description_back">Botón para regresar</string>
+    <string name="description_settings">Botón de configuraciones</string>
+    <string name="tlb_settings">Settings</string>
+    <string name="tlb_add_title">Crea cuenta</string>
+    <string name="tlb_logout">Cerrar sesión</string>
+    <string name="tlb_profile">Perfil de usuario</string>
+    <string name="tlb_modify_menu">Modificar menú</string>
 </resources>

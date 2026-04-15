@@ -13,13 +13,13 @@
         android:theme="@style/Base.Theme.Taqueria">
         <activity
             android:name=".presentation.ui.LogUpActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".presentation.ui.LoginActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".presentation.ui.DashboardActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".presentation.ui.SplashActivity"
             android:exported="true">

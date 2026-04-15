@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actionLogOut"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/tlb_logout"
+        />
+
+    <item
+        android:id="@+id/actionProfile"
+        android:title="@string/tlb_profile"/>
+
+    <item
+        android:id="@+id/actionModifyMenu"
+        android:title="@string/tlb_modify_menu"/>
+
+</menu>

@@ -5,16 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.LogUpActivity">
+    tools:context=".presentation.ui.LogUpActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tlb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/tlb_add_title"
+        android:background="@color/blue_light"/>
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/tilPhone"
+        android:layout_marginBottom="@dimen/margin_default"
         android:layout_marginHorizontal="@dimen/margin_default"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
         app:helperText="@string/helper_required"
@@ -32,10 +46,10 @@
         android:id="@+id/tilPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tilName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+        android:layout_marginBottom="@dimen/margin_default"
         android:layout_marginHorizontal="@dimen/margin_default"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
         android:hint="@string/hint_phone"
@@ -45,17 +59,17 @@
             android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPersonName"/>
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tilPhone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/tilPassword"
+        android:layout_marginBottom="@dimen/margin_default"
         android:layout_marginHorizontal="@dimen/margin_default"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
         android:hint="@string/hint_email"
@@ -73,10 +87,10 @@
         android:id="@+id/tilPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogUp"
+        android:layout_marginBottom="@dimen/margin_default"
         android:layout_marginHorizontal="@dimen/margin_default"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
         android:hint="@string/hint_password"
@@ -94,10 +108,9 @@
         android:id="@+id/btnLogUp"
         android:layout_width="@dimen/btn_width"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
-        app:layout_constraintEnd_toEndOf="@+id/tilPassword"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin_default"
         android:text="@string/btn_add_account"
         android:textColor="@color/white"
         android:backgroundTint="@color/blue"/>
@@ -106,10 +119,9 @@
         android:id="@+id/btnCancel"
         android:layout_width="@dimen/btn_width"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tilPassword"
-        android:layout_marginTop="@dimen/margin_default"
-        android:layout_marginStart="@dimen/margin_default"
+       android:layout_margin="@dimen/margin_default"
         android:text="@string/btn_cancel"
         android:backgroundTint="@color/white"/>
 

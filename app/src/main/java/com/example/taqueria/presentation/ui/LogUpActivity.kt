@@ -1,21 +1,75 @@
 package com.example.taqueria.presentation.ui
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.taqueria.R
+import com.example.taqueria.databinding.ActivityLogUpBinding
+import com.example.taqueria.utils.AppInterfaces
 
-class LogUpActivity : AppCompatActivity() {
+class LogUpActivity : AppCompatActivity(), AppInterfaces {
+
+    private lateinit var binding: ActivityLogUpBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_log_up)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+       setupBinding()
+
+       showTlbBututtons(true)
+        listenerBtnBack()
+        listenerBtnCancel()
+        setupToolbar()
+
+        }
+
+    private fun setupBinding(){
+        binding = ActivityLogUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+
+    private fun setupToolbar(){
+        setSupportActionBar(binding.tlb)
+
+
+        binding.tlb.setNavigationOnClickListener {
+            openActivity(MainActivity::class.java)
         }
     }
+
+
+    override fun showTlbBututtons(show: Boolean) {
+
+    }
+
+
+
+    override fun openActivity(activity: Class<*>) {
+       startActivity(Intent(this, activity))
+        finish()
+    }
+
+    override fun listenerBtnBack() {
+
+    }
+
+    override fun listenerBtnSettings() {
+
+    }
+
+    private fun listenerBtnCancel(){
+        binding.btnCancel.setOnClickListener {
+            openActivity(MainActivity::class.java)
+        }
+    }
+
+    private fun showMenu(){
+
+    }
+
+
 }
+
+
+
